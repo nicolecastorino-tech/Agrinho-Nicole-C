@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Susagro</title>
+
+  <!-- FONTES -->
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+
+  <!-- Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+
+  <!-- Chart -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1 class="titulo">🌱 SUSAGRO</h1>
+
+  <p class="subtitulo">
+    O agronegócio sustentável é essencial para garantir a produção de alimentos,
+    preservar o meio ambiente e promover o desenvolvimento econômico responsável.
+  </p>
+
+  <p class="instrucao">
+    Preencha seus dados abaixo para gerar um diagnóstico inteligente com soluções sustentáveis
+    personalizadas para sua região.
+  </p>
+</header>
+
+<section class="container">
+
+  <div class="form-box">
+    <h2>Consulta</h2>
+
+    <label>Estado:</label>
+    <select id="estado">
+      <option>AC</option><option>AL</option><option>AP</option><option>AM</option>
+      <option>BA</option><option>CE</option><option>DF</option><option>ES</option>
+      <option>GO</option><option>MA</option><option>MT</option><option>MS</option>
+      <option>MG</option><option>PA</option><option>PB</option><option>PR</option>
+      <option>PE</option><option>PI</option><option>RJ</option><option>RN</option>
+      <option>RS</option><option>RO</option><option>RR</option><option>SC</option>
+      <option>SP</option><option>SE</option><option>TO</option>
+    </select>
+
+    <label>Cidade:</label>
+    <input id="cidade" placeholder="Digite a cidade">
+
+    <label>Atividade:</label>
+    <select id="atividade">
+      <optgroup label="Grãos">
+        <option value="soja">Soja</option>
+        <option value="milho">Milho</option>
+        <option value="feijao">Feijão</option>
+        <option value="trigo">Trigo</option>
+        <option value="arroz">Arroz</option>
+      </optgroup>
+
+      <optgroup label="Culturas Permanentes">
+        <option value="cafe">Café</option>
+        <option value="cana">Cana-de-açúcar</option>
+        <option value="fruticultura">Fruticultura</option>
+      </optgroup>
+
+      <optgroup label="Pecuária">
+        <option value="pecuaria_corte">Pecuária de Corte</option>
+        <option value="pecuaria_leite">Pecuária Leiteira</option>
+        <option value="avicultura">Avicultura</option>
+        <option value="suinocultura">Suinocultura</option>
+      </optgroup>
+
+      <optgroup label="Outros">
+        <option value="silvicultura">Silvicultura</option>
+        <option value="extrativismo">Extrativismo</option>
+      </optgroup>
+    </select>
+
+    <button onclick="analisar()">Analisar</button>
+  </div>
+
+  <div class="resultado" id="resultado">
+    <p>Preencha os dados para gerar o diagnóstico.</p>
+  </div>
+
+</section>
+
+<div id="map"></div>
+<canvas id="grafico"></canvas>
+
+<footer>
+  <p>Agrinho 2026 - Susagro</p>
+</footer>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

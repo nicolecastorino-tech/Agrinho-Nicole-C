@@ -1,0 +1,67 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #b2ff59, #69f0ae);
+}
+
+header {
+  text-align: center;
+  padding: 25px;
+  background: linear-gradient(90deg, #00c853, #d50000);
+  color: white;
+}
+
+.titulo {
+  font-family: 'Bungee', cursive;
+  font-size: 50px;
+  letter-spacing: 3px;
+  text-shadow: 3px 3px 0 #000;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.form-box, .resultado {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  width: 320px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+button {
+  margin-top: 15px;
+  padding: 12px;
+  width: 100%;
+  background: #00c853;
+  color: white;
+  border: none;
+  font-weight: bold;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #d50000;
+  transform: scale(1.1);
+}
+
+#map {
+  height: 300px;
+  margin: 20px;
+  border-radius: 15px;
+}
+
+canvas {
+  max-width: 600px;
+  margin: auto;
+  display: block;
+}
+
+h3 {
+  color: #2e7d32;
+}
